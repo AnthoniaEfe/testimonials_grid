@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+}
+
+main {
+  font-size: 15px;
+  font-family: "Poppins";
+  color: hsl(0, 0%, 100%);
+  width: 375px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 95px;
+  margin-bottom: 75px;
+}
+
+header {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: hsl(212, 6%, 44%);
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  font-family: Poppins-SemiBold, sans-serif;
+  font-size: 1.5rem;
+  color: hsl(234, 12%, 34%);
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-family: Poppins-SemiBold, sans-serif;
+  margin: 0;
+  font-size: 1.25rem;
+  color: hsl(234, 12%, 34%);
+}
+
+.desc {
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(212, 6%, 44%);
+  text-align: justify;
+  margin: 0.75rem auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background-color: inherit;
+  padding: 0;
+  margin: 3.5rem 0;
+  width: 90%;
+  max-width: 800px;
+}
+
+.grid-item {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 8px;
+  margin: auto;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 10px 4px hsl(212, 6%, 44%, 0.15);
+}
+
+.grid-item p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+#card1 {
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+#card2 {
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+#card3 {
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+#card4 {
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+.card-img {
+  height: 4rem;
+  width: 4rem;
+  float: right;
+  margin: 0.75rem 0 0.75rem auto;
+}
+
+/* desktop view */
+@media (min-width: 768px) {
+  .grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 2.5rem;
+    column-gap: 5rem;
+    place-content: space-between;
+    background-color: inherit;
+    padding: 0;
+    margin: 3.5rem 0;
+  }
+
+  header {
+    width: 40%;
+    min-width: 600px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    line-height: 2.3rem;
+  }
+  h2 {
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+    line-height: 2.4rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+    margin: 1.25rem 0;
+  }
+
+  /* unequal distribution of cards */
+  #card1 {
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  #card4 {
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  .grid-item:nth-child(1) {
+    grid-column: 1;
+  }
+
+  .grid-item:nth-child(2),
+  .grid-item:nth-child(3) {
+    grid-column: 2;
+  }
+
+  .grid-item:nth-child(4) {
+    grid-column: 3;
+  }
+}
