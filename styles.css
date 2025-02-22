@@ -29,12 +29,6 @@ main {
   margin: 5% auto;
 }
 
-header {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 800px;
-}
-
 /* mobile grid styles */
 .grid-container {
   display: grid;
